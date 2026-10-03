@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spelling Bee 2026–2027 | Grade KG-III - Suffah Intellectual Schools</title>
+  
+  <!-- Olde English Webfont + Modern UI fonts -->
+  <link href="https://fonts.cdnfonts.com/css/olde-english" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #005076;
+      --teal: #3cb5a1;
+      --slate: #548694;
+      --gold: #fcc043;
+      --gold-dark: #d99a19;
+      --bg-cream: #f6f9fb;
+      --card-bg: #ffffff;
+      --text-dark: #1b2e35;
+      --text-muted: #5e737c;
+      --border-color: #e1ebf0;
+      --shadow-sm: 0 4px 12px rgba(0, 80, 118, 0.05);
+      --shadow-md: 0 8px 24px rgba(0, 80, 118, 0.09);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Navigation / Brand Banner */
+    header {
+      background: linear-gradient(135deg, var(--navy) 0%, #003650 100%);
+      color: #ffffff;
+      padding: 24px 20px 28px;
+      box-shadow: 0 6px 20px rgba(0, 50, 80, 0.2);
+      border-bottom: 5px solid var(--gold);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo-container {
+      width: 72px;
+      height: 72px;
+      background: #ffffff;
+      border-radius: 50%;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      border: 3px solid var(--gold);
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+      display: block;
+    }
+
+    /* Dieter Steffmann Olde English Font */
+    .brand-meta h1 {
+      font-family: 'Olde English', 'Old English Text MT', serif;
+      font-size: 2.35rem;
+      font-weight: normal;
+      letter-spacing: 0.8px;
+      color: #ffffff;
+      line-height: 1.25;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+    }
+
+    .brand-meta .tagline {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.85rem;
+      color: var(--teal);
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .competition-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      padding: 6px 18px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .competition-pill span.badge-gold {
+      background: var(--gold);
+      color: #2b1f00;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 0.78rem;
+    }
+
+    /* Main Container */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+      flex: 1;
+      width: 100%;
+    }
+
+    /* Controls Bar */
+    .controls-wrapper {
+      background: var(--card-bg);
+      padding: 16px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 240px;
+      position: relative;
+    }
+
+    .search-box svg {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      fill: var(--text-muted);
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px 14px 12px 42px;
+      border-radius: 12px;
+      border: 1.5px solid var(--border-color);
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: var(--text-dark);
+      outline: none;
+      transition: all 0.2s ease;
+      background: #fbfdfe;
+    }
+
+    .search-box input:focus {
+      border-color: var(--teal);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(60, 181, 161, 0.15);
+    }
+
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-toggle-practice {
+      background: #f0f7f9;
+      color: var(--navy);
+      border: 1.5px solid var(--slate);
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-toggle-practice.active {
+      background: var(--navy);
+      color: #ffffff;
+      border-color: var(--navy);
+    }
+
+    .word-count-badge {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--slate);
+      background: #f0f7f9;
+      padding: 8px 14px;
+      border-radius: 10px;
+      white-space: nowrap;
+    }
+
+    /* Word Cards Grid */
+    .words-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .word-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 16px 14px;
+      box-shadow: var(--shadow-sm);
+      border: 1.5px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .word-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--teal);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .word-num {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--slate);
+      background: #eef6f9;
+      padding: 3px 8px;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .word-text-wrapper {
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 4px 0 10px;
+    }
+
+    .word-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      user-select: none;
+      transition: color 0.2s ease;
+      word-break: break-word;
+    }
+
+    .word-title:hover {
+      color: var(--teal);
+    }
+
+    /* Practice Mode (Hidden Word) */
+    .word-card.hidden-mode .word-title {
+      filter: blur(8px);
+      opacity: 0.25;
+      cursor: pointer;
+    }
+
+    .word-card.hidden-mode .word-title.revealed {
+      filter: none;
+      opacity: 1;
+      color: var(--teal);
+    }
+
+    .card-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .btn-speak {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: #f0f8f7;
+      color: #0b6c5d;
+      border: 1px solid rgba(60, 181, 161, 0.4);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-speak:hover {
+      background: var(--teal);
+      color: #ffffff;
+      border-color: var(--teal);
+    }
+
+    .btn-speak-slow {
+      background: #fff8e8;
+      color: #926300;
+      border: 1px solid rgba(252, 192, 67, 0.5);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-speak-slow:hover {
+      background: var(--gold);
+      color: #2b1f00;
+    }
+
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 50px 20px;
+      background: #ffffff;
+      border-radius: var(--radius);
+      border: 1px dashed var(--border-color);
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      background: #ffffff;
+      border-top: 1px solid var(--border-color);
+      padding: 24px 20px;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .official-link {
+      color: var(--navy);
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.95rem;
+      padding: 6px 14px;
+      border-radius: 30px;
+      background: #eef6f9;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .official-link:hover {
+      background: var(--navy);
+      color: #ffffff;
+    }
+
+    .footer-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 600px) {
+      .header-container {
+        gap: 10px;
+      }
+      .brand-meta h1 {
+        font-size: 1.75rem;
+      }
+      .logo-container {
+        width: 60px;
+        height: 60px;
+      }
+      .words-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .word-title {
+        font-size: 1.25rem;
+      }
+      .controls-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="https://www.suffah.edu.pk/" target="_blank" rel="noopener noreferrer" class="brand-group" title="Visit Suffah Intellectual School Official Website">
+        <div class="logo-container">
+          <img src="https://www.suffah.edu.pk/images/logo-new.png" alt="Suffah Intellectual School Logo" id="school-logo" />
+        </div>
+        <div class="brand-meta">
+          <h1>Suffah Intellectual School</h1>
+          <div class="tagline">Learn &bull; Implement &bull; Succeed</div>
+        </div>
+      </a>
+
+      <div class="competition-pill">
+        <span>Spelling Bee Competition 2026–2027</span>
+        <span class="badge-gold">Grade KG-III</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="controls-wrapper">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 14z"/></svg>
+        <input type="text" id="searchInput" placeholder="Search a word (e.g. magic, truck)..." autocomplete="off" />
+      </div>
+
+      <div class="action-group">
+        <button id="practiceToggleBtn" class="btn-toggle-practice" type="button" title="Hide spelling so student can test memory">
+          <span>🙈 Practice Mode (Hide Words)</span>
+        </button>
+        <div class="word-count-badge" id="wordCountBadge">
+          30 Words
+        </div>
+      </div>
+    </div>
+
+    <div class="words-grid" id="wordsGrid"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <a href="https://www.suffah.edu.pk/" target="_blank" rel="noopener noreferrer" class="official-link">
+        🌐 Official Website: www.suffah.edu.pk
+      </a>
+      <div class="footer-sub">
+        Suffah Intellectual Schools &bull; Learn | Implement | Succeed
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // All 30 Grade KG-III Words
+    const spellingWords = [
+      "is", "this", "that", "he", "she",
+      "stuck", "muck", "bug", "lost", "magic",
+      "it", "ten", "ben", "fun", "hot",
+      "mug", "dress", "pink", "gets", "best",
+      "pot", "shop", "cot", "shot", "dot",
+      "truck", "cross", "dragon", "kick", "ship"
+    ];
+
+    let isPracticeMode = false;
+    let britishVoice = null;
+
+    // Prioritize authentic British (en-GB) voices
+    function initBritishVoice() {
+      if (!('speechSynthesis' in window)) return;
+      const voices = window.speechSynthesis.getVoices();
+      
+      britishVoice = voices.find(v => 
+        (v.lang === 'en-GB' || v.lang === 'en_GB') && 
+        (v.name.includes('United Kingdom') || v.name.includes('British') || v.name.includes('UK') || v.name.includes('Oliver') || v.name.includes('George') || v.name.includes('Serena') || v.name.includes('Daniel') || v.name.includes('English United Kingdom'))
+      ) || voices.find(v => v.lang === 'en-GB' || v.lang === 'en_GB') 
+        || voices.find(v => v.lang.startsWith('en'));
+    }
+
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = initBritishVoice;
+      initBritishVoice();
+    }
+
+    // Pronunciation locked to British Accent (en-GB)
+    function speakWord(word, rate = 1.0) {
+      if (!('speechSynthesis' in window)) {
+        alert("Text-to-speech is not supported on this browser.");
+        return;
+      }
+      window.speechSynthesis.cancel();
+      
+      const utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-GB';
+      utterance.rate = rate;
+      utterance.pitch = 1.0;
+
+      if (!britishVoice) {
+        initBritishVoice();
+      }
+      if (britishVoice) {
+        utterance.voice = britishVoice;
+      }
+
+      window.speechSynthesis.speak(utterance);
+    }
+
+    // Render Cards
+    const wordsGrid = document.getElementById('wordsGrid');
+    const searchInput = document.getElementById('searchInput');
+    const practiceToggleBtn = document.getElementById('practiceToggleBtn');
+    const wordCountBadge = document.getElementById('wordCountBadge');
+
+    function renderWords(filterQuery = '') {
+      wordsGrid.innerHTML = '';
+      const cleanFilter = filterQuery.trim().toLowerCase();
+
+      let visibleCount = 0;
+
+      spellingWords.forEach((word, index) => {
+        if (cleanFilter && !word.toLowerCase().includes(cleanFilter)) {
+          return;
+        }
+
+        visibleCount++;
+        const card = document.createElement('div');
+        card.className = `word-card ${isPracticeMode ? 'hidden-mode' : ''}`;
+
+        card.innerHTML = `
+          <div class="card-top">
+            <span class="word-num">#${index + 1}</span>
+          </div>
+          <div class="word-text-wrapper">
+            <span class="word-title" title="Click to hear or tap to reveal">${word}</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-speak" title="Listen to British pronunciation" onclick="speakWord('${word}', 1.0)">
+              🔊 Listen
+            </button>
+            <button class="btn-speak-slow" title="Listen slowly (British phonics)" onclick="speakWord('${word}', 0.65)">
+              🐢 Slow
+            </button>
+          </div>
+        `;
+
+        const wordTitleEl = card.querySelector('.word-title');
+        wordTitleEl.addEventListener('click', () => {
+          if (isPracticeMode && !wordTitleEl.classList.contains('revealed')) {
+            wordTitleEl.classList.add('revealed');
+          } else {
+            speakWord(word, 1.0);
+          }
+        });
+
+        wordsGrid.appendChild(card);
+      });
+
+      if (visibleCount === 0) {
+        wordsGrid.innerHTML = `
+          <div class="no-results">
+            <h3>No spelling matches found</h3>
+            <p>Try searching for a different word or clearing the search bar.</p>
+          </div>
+        `;
+      }
+
+      wordCountBadge.innerText = `${visibleCount} / 30 Words`;
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      renderWords(e.target.value);
+    });
+
+    practiceToggleBtn.addEventListener('click', () => {
+      isPracticeMode = !isPracticeMode;
+      practiceToggleBtn.classList.toggle('active', isPracticeMode);
+      practiceToggleBtn.innerHTML = isPracticeMode 
+        ? `<span>👀 Show Words</span>`
+        : `<span>🙈 Practice Mode (Hide Words)</span>`;
+      renderWords(searchInput.value);
+    });
+
+    renderWords();
+  </script>
+</body>
+</html>
